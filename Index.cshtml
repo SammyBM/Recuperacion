@@ -1,5 +1,5 @@
 ﻿@page
-@model WebApp.Pages.Models.StartModel;
+@model Recuperacion.Models.IndexModel;
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 <head>
@@ -18,8 +18,6 @@
 
 <div class="container-fluid">
     <div class="row no-gutter">
-
-
         <!-- The content half -->
         <div class="col-md-6 bg-light">
             <div class="login d-flex align-items-center py-5">
@@ -32,10 +30,10 @@
                             <p class="text-muted mb-4" style="text-align: right;">Please log in with your email and password</p>
                             <form method="post">
                                 <div class="form-group mb-3">
-                                    <input asp-for="TextUsername" class="form-control rounded-pill border-0 shadow-sm px-4" placeholder="Username" required=""/>
+                                    <input class="form-control rounded-pill border-0 shadow-sm px-4" placeholder="Username" required=""/>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <input asp-for="TextPassword" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary" placeholder="Password" required=""/>
+                                    <input class="form-control rounded-pill border-0 shadow-sm px-4 text-primary" placeholder="Password" required=""/>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Sign in</button>
                             </form>
@@ -44,16 +42,30 @@
                 </div><!-- End -->
             </div>
         </div><!-- End -->
-        <!-- The image half -->
-        <div class="col-md-6 d-none d-md-flex bg-image"></div>
+
+
+        <!-- The conference list -->
+        <div>
+            <table class = "table">
+                <thead class="thead-inverse">
+                    <tr><th>Current Conferences</th></tr>
+                </thead>
+                <tbody>
+                    @* @foreach(var conference in MyModel.Conferences)
+                        {
+                            <tr><td>@conference.Name @Conference.Begin @Conference.End @conference.Presenter</td></tr>
+                        } *@
+                </tbody>
+            </table>
+        </div>
 
     </div>
 </div>
 
 <!-- Error Toast -->
-@if (Model.HasError)
+@* @if (Model.HasError)
 {
     <div class="alert alert-danger">
         <strong>Error!</strong> Wrong credentials
     </div>
-}
+} *@

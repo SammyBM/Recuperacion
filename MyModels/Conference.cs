@@ -1,10 +1,11 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Recuperacion.MyModels
 {
     public class Conference
     {
-        [key]
+        [Key]
         public int ConferenceID { get; set; }
         public string Name { get; set; }
         public int Presenter { get; set; }
@@ -13,3 +14,4 @@ namespace Recuperacion.MyModels
         public decimal? Cost {get; set; }
         public int Capacity {get; set; }
     }
+}
