@@ -1,6 +1,6 @@
 using System;
 
-namespace Recuperacion.Models
+namespace Recuperacion.MyModels
 {
     public class Person
     {
